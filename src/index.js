@@ -4,7 +4,7 @@ import App from './App';
 import createStore from './createStore'
 import manageBand from './reducers/manageBand'
 
-const store = createStore(manageBand)
+const store = createStore(manageBand, {bands: ['hello', 'goodbye', 'ciao']})
 
 const render = () => {
   ReactDOM.render(
@@ -16,6 +16,4 @@ const render = () => {
 // not directly exporting the render function
 // because need to stub it out in tests.
 export const renderer = { render };
-
 store.dispatch({ type: '@@init' });
-
