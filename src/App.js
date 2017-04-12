@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BandInput store={this.props.store} />
+      <BandInput store={this.props.store} />
         <Bands store={this.props.store}/>
       </div>
     );
